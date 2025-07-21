@@ -17,5 +17,17 @@
         <button onclick="nextWord()">Next Word</button>
     </div>
     <script src="script.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator)
+    {
+    navigator.serviceWorker.register("script.js")
+        .then(function()
+    { consol.log("Service Worker Registered");
+    });
+    }
+    </script>
+    <link rel="manifest"
+    href="manifest.json">
 </body>
 </html>
